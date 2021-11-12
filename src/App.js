@@ -1,14 +1,16 @@
 import './App.css';
-import myComp from './myComp';
+import {NavBar} from './myComponents/navBar';
+import {ItemList} from './myComponents/itemList';
 
 function App() {
   let name1 = "Aaryan";
+  let name2 = "Arush";
 
   return (
-    <div>
-      <h1>Hello {name1}</h1>
-      <myComp name="Arush"/>
-    </div>
+    <>
+      <NavBar name={name1} name1={name2}/>
+      <ItemList/>
+    </>
   );
 }
 
