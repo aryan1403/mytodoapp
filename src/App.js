@@ -1,6 +1,8 @@
 import './App.css';
 import {NavBar} from './myComponents/navBar';
-import {ItemList} from './myComponents/itemList';
+import { BrowserRouter as Router, Route, Routes} from "react-router-dom";
+import { About } from './myComponents/about';
+import { Home } from "./myComponents/home";
 
 function App() {
   let name1 = "Aaryan";
@@ -8,8 +10,13 @@ function App() {
 
   return (
     <>
+      <Router>
       <NavBar name={name1} name1={name2}/>
-      <ItemList/>
+        <Routes>
+          <Route path="/" element={<Home/>}/>
+          <Route path="/aryan" element={<About/>} />
+        </Routes>
+      </Router>
     </>
   );
 }
